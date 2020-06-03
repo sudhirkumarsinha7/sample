@@ -50,6 +50,18 @@ class UserList extends Component {
   userDetails(item) {
     this.props.navigation.navigate('UserDetails', {item: item});
   }
+renderEachRow(leftText,rightText){
+  return (
+      <View style = {{flex:1,flexDirection:'row'}}>
+          <View style = {{flex:0.4,padding:10}}>
+          <Text>{leftText}</Text>
+      </View>
+      <View style = {{flex:0.6, padding:10}}>
+          <Text>{rightText}</Text>
+      </View>
+      </View>
+  )
+}
   UserListData(item) {
     return (
       <TouchableOpacity onPress={() => this.userDetails(item)}>
@@ -57,32 +69,24 @@ class UserList extends Component {
           style={{
             flex: 1,
             flexDirection: 'row',
-            borderTopWidth: 0,
+            borderBottomWidth:0.5
           }}>
           <View
-            style={{
-              flex: 0.2,
-              height: 80,
-              width: 80,
-              borderRadius: 40,
-              borderColor: 'green',
-              overflow: 'hidden',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            {/* <Text style={{ paddingLeft: 5 }}>{item.id}</Text> */}
+            style={{ ...styles.positionCenter,padding:2}}>
             <Image
               source={{uri: item.avatar}}
               style={{width: 80, height: 80}}
             />
           </View>
-          <View style={{flex: 0.8, justifyContent: 'center'}}>
-            <Text
+          <View style={{flex: 1, justifyContent: 'center'}}>
+            {/* <Text
               style={{paddingLeft: 5}}
               numberOfLines={1}
               ellipsizeMode={'tail'}>
               {item.email}
-            </Text>
+            </Text> */}
+             {this.renderEachRow('User ID : ',item.id)}
+              {this.renderEachRow('Name : ',item.first_name + ' '+ item.last_name)}
           </View>
         </View>
       </TouchableOpacity>

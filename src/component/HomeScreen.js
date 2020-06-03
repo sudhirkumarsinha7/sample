@@ -1,21 +1,3 @@
-// import {createStackNavigator} from 'react-navigation';
-// import UserList from './UserList';
-// import UserDetails from './UserDetails';
-// const HomeScreen = createStackNavigator(
-//   {
-//     USER_LIST: {screen: UserList},
-//     USER_DETAILS: {screen: UserDetails},
-//   },
-//   {
-//     initialRouteName: 'USER_LIST',
-//     defaultNavigationOptions: {
-//       headerMode: 'none',
-//       header: null,
-//     },
-//   },
-// );;
-
-// export default HomeScreen;
 
 import * as React from 'react';
 import {Button, View} from 'react-native';
@@ -30,12 +12,24 @@ function MyStack() {
       <Stack.Screen
         name="UserList"
         component={UserList}
-        options={{title: 'User List'}}
+        options={{title: 'User List',headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },}}
       />
       <Stack.Screen
         name="UserDetails"
         component={UserDetails}
-        options={{title: 'User Details'}}
+        options={{title: 'User Details',headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },}}
       />
     </Stack.Navigator>
   );
