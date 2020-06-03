@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ib_mac1/Desktop/React Native/Training/Sample/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
+            "outputFile": "/Users/ib_mac1/Desktop/React Native/Training/sample/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/ib_mac1/.gradle/caches/transforms-2/files-2.1/4f509a65121478d6153615d7ef5b7c5f/core-1.1.0/res/values-de/values-de.xml",
